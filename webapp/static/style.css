@@ -1,0 +1,135 @@
+:root {
+    --cor-primaria: #1F3B57;
+    --cor-acento: #C9A24B;
+    --cor-fundo: #F4F2ED;
+    --cor-critica: #B22222;
+    --cor-alta: #FF4500;
+    --cor-media: #B8860B;
+    --cor-baixa: #2E8B57;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--cor-fundo);
+    margin: 0;
+    color: #222;
+}
+
+.pagina-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.caixa-login {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+}
+.caixa-login h1 { color: var(--cor-primaria); margin-bottom: 4px; }
+.caixa-login .subtitulo { color: #777; font-size: 13px; margin-bottom: 24px; }
+.caixa-login input[type=password] {
+    width: 100%; padding: 10px; margin-bottom: 12px;
+    border: 1px solid #ccc; border-radius: 4px;
+}
+.caixa-login button {
+    width: 100%; padding: 10px; background: var(--cor-primaria); color: white;
+    border: none; border-radius: 4px; cursor: pointer; font-weight: 600;
+}
+.caixa-login .erro { color: var(--cor-critica); margin-top: 12px; font-size: 13px; }
+
+.topo {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topo h1 { font-size: 18px; margin: 0; }
+.link-sair { color: white; text-decoration: underline; font-size: 13px; }
+
+.abas {
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 24px;
+}
+.aba-btn {
+    padding: 12px 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 3px solid transparent;
+}
+.aba-btn.ativa { color: var(--cor-primaria); border-bottom-color: var(--cor-acento); }
+
+.conteudo-aba { display: none; padding: 24px; max-width: 900px; margin: 0 auto; }
+.conteudo-aba.ativa { display: block; }
+
+.linha-controles {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.painel {
+    background: white; border: 1px solid #ddd; border-radius: 6px;
+    padding: 16px; margin-bottom: 16px;
+}
+.painel h3 { margin-top: 0; margin-bottom: 4px; }
+.ajuda { color: #777; font-size: 12px; margin-top: 0; margin-bottom: 10px; }
+
+textarea, select, input[type=file] {
+    font-family: inherit; font-size: 14px;
+    border: 1px solid #ccc; border-radius: 4px; padding: 6px;
+}
+textarea { width: 100%; resize: vertical; }
+
+button {
+    background: var(--cor-primaria); color: white; border: none;
+    padding: 10px 16px; border-radius: 4px; cursor: pointer; font-weight: 600;
+}
+button:disabled { background: #aaa; cursor: not-allowed; }
+
+.status { font-weight: 600; color: var(--cor-acento); }
+
+.miniaturas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.miniatura {
+    width: 96px; text-align: center; border: 1px solid #ddd; border-radius: 4px;
+    padding: 4px; font-size: 10px;
+}
+.miniatura img { width: 88px; height: 88px; object-fit: cover; border-radius: 2px; }
+
+.opcoes-formatacao { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.opcoes-formatacao label { font-size: 14px; }
+
+.resumo-analise {
+    background: white; border-radius: 6px; padding: 16px; margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.achado {
+    background: white; border-radius: 6px; margin-bottom: 10px; padding: 12px 12px 12px 16px;
+    display: flex; gap: 12px; border-left: 6px solid #ccc;
+}
+.achado.critica { border-left-color: var(--cor-critica); }
+.achado.alta { border-left-color: var(--cor-alta); }
+.achado.media { border-left-color: var(--cor-media); }
+.achado.baixa { border-left-color: var(--cor-baixa); }
+
+.achado-titulo { font-weight: bold; }
+.achado.critica .achado-titulo { color: var(--cor-critica); }
+.achado.alta .achado-titulo { color: var(--cor-alta); }
+.achado.media .achado-titulo { color: var(--cor-media); }
+.achado.baixa .achado-titulo { color: var(--cor-baixa); }
+
+.achado-base-legal { font-style: italic; color: #555; margin: 4px 0; }
+.achado-recomendacao { font-weight: 600; margin-top: 4px; }
