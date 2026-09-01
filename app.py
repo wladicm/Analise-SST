@@ -10,7 +10,7 @@ from services import docx_extractor, docx_formatter, gemini_service
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "troque-esta-chave-em-producao")
 
-APP_PASSWORD = os.environ.get("APP_PASSWORD", "")
+APP_PASSWORD = os.environ.get("APP_PASSWORD", "12345")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 PASTA_TEMP = tempfile.gettempdir()
